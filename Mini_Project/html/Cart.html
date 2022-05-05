@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cart.css" type="text/css">
+    <title>cart</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="left_nav">
+                <div class="logo">
+                    <a href="index.html">
+                    <img class="logo_pic" src="/images/logo_png.png" alt="logo">
+                </a>
+                </div>
+                <div class="logo_name">
+                    <a href="index.html"><h4>ƬΣЯЯΛ GЯΣΣП</h4></a>
+                </div>
+            </div>
+            <div class="right_nav">
+                <a href="index.html">Home</a>
+                <a href="Standard_Flavour.html">Products</a>
+                <button data-modal-target="#modal" id="sign_in">Sign In</button> 
+                <button id="profile" onclick="profile()">profile</button>                
+                <div class="avatar-wrapper" id="avatar-wrapper">
+                    <div class="log-toolContainer">
+                        <div class="log-popover">
+                            <a href="cart.html">
+                                <button>Profile</button>
+                            </a>
+                            <button class="logout" onclick="signOut()">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Sign-in pop up window -->
+    <div class="modal" id="modal">
+        <div class="modal-inner">
+            <img class="logo_pic_1" src="/images/modal_logo1.png" alt="logo">
+            <button data-close-button class="close_button">&times;</button>
+        </div>
+        <h3>Sign In To Get Most Of Our Terra Green</h3>
+        <div class="modal-outer">
+            <div id="sign_up">
+                <div class="form">
+                    <label for="email">E-Mail</label>
+                    <input id="Email" type="email" placeholder="Enter your Mail ID">
+                    <br>
+                    <label for="password">Password</label>
+                    <input id="Password" type="password" placeholder="Enter your password">
+                    <button id="signIn" onclick="signIn()">signIn</button>
+                    <h5 id="signup">If You Don't Have An Account? <a id="signup_1" href="sign_up2.html">Sign Up</a></h5>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <div id="default">
+        <p>
+            In order to order drinks from our site, you need to <button id="button1" data-modal-target="#modal">Sign In</button>  first
+        </p>
+    </div>
+    <div class="outer_div" id="cart">
+        <div class="cart">
+            <section class="container content-section">
+                <h2 class="section-header">CART</h2>
+                <div class="cart-row">
+                    <span class="cart-item cart-header cart-column">ITEM</span>
+                    <span class="cart-price cart-header cart-column">PRICE</span>
+                    <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+                <div class="cart-items">
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="/images/Tin_cans/peach_tin.png" width="100" height="100">
+                            <span class="cart-item-title">Peach Flavour</span>
+                        </div>
+                        <span class="cart-price cart-column">50.00</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input q1" type="number" min="0" value="0">
+                        </div>
+                    </div>
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="/images/Tin_cans/sugarfree_tin.png" width="100" height="100">
+                            <span class="cart-item-title">sugarfree Flavour</span>
+                        </div>
+                        <span class="cart-price cart-column">40.00</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input q2" type="number" value="0">
+                        </div>
+                    </div>
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="/images/Tin_cans/standard_tin.png" width="100" height="100">
+                            <span class="cart-item-title">Standard Flavour</span>
+                        </div>
+                        <span class="cart-price cart-column">30.00</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input q3" type="number" value="0">
+                        </div>
+                    </div>
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="/images/Tin_cans/berry_tin.png" width="100" height="100">
+                            <span class="cart-item-title">Berry Flavour</span>
+                        </div>
+                        <span class="cart-price cart-column">40.00</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input q4" type="number" value="0">
+                        </div>
+                    </div>
+                    <div class="cart-row">
+                        <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="/images/Tin_cans/tropical_tin.png" width="100" height="100">
+                            <span class="cart-item-title">Tropical Flavour</span>
+                        </div>
+                        <span class="cart-price cart-column">50.00</span>
+                        <div class="cart-quantity cart-column">
+                            <input class="cart-quantity-input q5" type="number" value="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total &#8377</strong>
+                    <span class="cart-total-price"></span>
+                </div>     
+                <div class="div">
+                    <button class="btn-purchase">
+                        <a href="ordered.html">Ordered</a>
+                    </button>   
+                    <button class="btn-purchase" type="button" onclick="store()">
+                        PURCHASE
+                    </button>
+                </div>
+            </section>
+        </div>
+        <table class="profile">
+            <th>
+                <h1>PROFILE</h1>
+            </th>
+            
+            <tr class="prof1">
+                <td>
+                    <p>UserName:</p>
+                </td>
+                <td>
+                    <p id="getusername" class="prof2 getusername"></p>
+                </td>
+            </tr>
+            <tr class="prof1">
+                <td>
+                    <p>E-Mail:</p>
+                </td>
+                <td>
+                    <p id="getemail" class="prof2 getemail"></p>
+                </td>
+                
+                
+            </tr>
+            <tr class="prof1">
+                <td>
+                    <p>Phone Number:</p>
+                </td>
+                <td>
+                    <p id="getphone" class="prof2 getphone"></p>
+                </td>
+                
+                
+            </tr>
+            <tr class="prof1">
+                <td>
+                    <p>Address:</p>
+                </td>
+                <td>
+                    <p id="getaddress" class="prof2 getaddress"></p>
+                </td>
+                
+                
+            </tr>
+        </table>
+    </div>
+    <div class="buy_things">
+        
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/cart.js"></script>
+</body>

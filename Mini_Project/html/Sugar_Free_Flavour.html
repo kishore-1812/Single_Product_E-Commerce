@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<a href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" target="_blank" rel="noreferrer noopener">
+    <link rel="stylesheet" href="<a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" target="_blank" rel="noreferrer noopener">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/Sugar_Free_Flavour.css" type="text/css">
+    <title>Sugar_Free_Flavour</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="left_nav">
+                <div class="logo">
+                    <a href="index.html">
+                    <img class="logo_pic" src="/images/logo_png.png" alt="logo">
+                </a>
+                </div>
+                <div class="logo_name">
+                    <a href="index.html"><h4>ƬΣЯЯΛ GЯΣΣП</h4></a>
+                </div>
+            </div>
+            <div class="right_nav">
+                <a href="index.html">Home</a>
+                <a href="Standard_Flavour.html">Products</a>
+                <button data-modal-target="#modal"id="sign_in">Sign In</button>
+                <button id="profile" onclick="profile()">profile</button>                
+                <div class="avatar-wrapper" id="avatar-wrapper">
+                    <div class="log-toolContainer">
+                        <div class="log-popover">
+                            <a href="cart.html">
+                                <button>Profile</button>
+                            </a>
+                            <button class="logout" onclick="signOut()">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Sign-in pop up window -->
+    <div class="modal" id="modal">
+        <div class="modal-inner">
+            <img class="logo_pic_1" src="/images/modal_logo1.png" alt="logo">
+            <button data-close-button class="close_button">&times;</button>
+        </div>
+        <h3>Sign In To Get Most Of Our Terra Green</h3>
+        <div class="modal-outer">
+            <div id="sign_up">
+                <div class="form">
+                    <label for="email">E-Mail</label>
+                    <input id="Email" type="email" placeholder="Enter your Mail ID">
+                    <br>
+                    <label for="password">Password</label>
+                    <input id="Password" type="password" placeholder="Enter your password">
+                    <button id="signIn" onclick="signIn()">signIn</button>
+                    <h5 id="signup">If You Don't Have An Account? <a id="signup_1" href="sign_up2.html">Sign Up</a></h5>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="overlay"></div>
+    
+    <div class="first_slide_box1">
+        <div class="first_slide_box2">
+            <div>
+                <img src="/images/Tin_cans/sugarfree_tin.png" alt="" class="cans">
+            </div>
+            <div>
+                <h1>TASTE : SUGARFREE
+                    <br>FROM : TERRA GREEN
+                </h1>
+                <p class="para">Life is as sugarfree as you make it to be. Terra Green SugarFree Edition</p>
+                <div class="learn_more">
+                    <a href="#Ingredients" class="Learn_More">
+                        <button class="Learn_More2">Learn More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="second_slide_box1">
+        <div class="second_slide_box2">
+            <div>
+                <img src="/images/Tin_cans/sugarfree_tin.png" alt="" class="cans1">
+            </div>
+            <div>
+                <h2 class="ingredients" id="Ingredients">INGREDIENTS</h2>
+                <ul>
+                    <li>
+                        <button onclick="Ingredients1()" class="list">
+                            <div>Caffeine</div>
+                            <i class="arrow_down"></i>
+                        </button>
+                        <p id="para1">Caffeine is a central nervous system stimulant of the methylxanthine class. It is the world's most widely consumed psychoactive drug. Unlike many other psychoactive substances, it is legal and unregulated in nearly all parts of the world.</p>
+                    </li>
+                    <li>
+                        <button onclick="Ingredients2()" class="list">
+                            <div>B-Group Vitamins</div>
+                            <i class="arrow_down"></i>
+                        </button>
+                        <p id="para2">B vitamins play a vital role in maintaining good health and well-being. As the building blocks of a healthy body, B vitamins have a direct impact on your energy levels, brain function, and cell metabolism. Vitamin B complex helps prevent infections and helps support or promote: cell health.</p>
+                    </li>
+                    <li>         
+                        <button onclick="Ingredients3()" class="list">
+                            <div>Sugar</div>
+                            <i class="arrow_down"></i>
+                        </button>
+                        <p id="para3">Our drink is made with sugar sourced from sugar beets..</p>
+                    </li>
+                    <li>
+                        <button onclick="Ingredients4()" class="list">
+                            <div>L-Cartine</div>
+                            <i class="arrow_down"></i>
+                        </button>
+                        <p id="para4">L-carnitine is a chemical that is made in the human brain, liver, and kidneys. It helps the body turn fat into energy.</p>
+                    </li>
+                    <li>
+                        <button onclick="Ingredients5()" class="list">
+                            <div>Alpine Water</div>
+                            <i class="arrow_down"></i>
+                        </button>
+                        <p id="para5">Water is one of the important mineral in our drink</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- carousel display -->
+    <<div id="slider" class="pt-5">
+        <div class="container">
+            <div class="slider">
+                      <div class="owl-carousel">
+                          <a href="Standard_Flavour.html">
+                            <div class="slider-card" id="standard">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="/images/Tin_cans/standard_tin.png" alt="" class="image">
+                                </div>
+                                <h5 class="mb-0 text-center"><b id="standard_disp">Standard Edition</b></h5>
+                            </div>
+                          </a>
+                          <a href="Peach_Flavour.html">
+                            <div class="slider-card" id="peach">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="/images/Tin_cans/peach_tin.png" alt="" class="image">
+                                </div>
+                                <h5 class="mb-0 text-center"><b id="peach_disp">Peach Edition</b></h5>
+                            </div>
+                          </a>
+                          <a href="Sugar_Free_Flavour.html">
+                            <div class="slider-card" id="sugarfree">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="/images/Tin_cans/sugarfree_tin.png" alt="" class="image">
+                                </div>
+                                <h5 class="mb-0 text-center"><b id="sugarfree_disp">SugarFree Edition</b></h5>
+                            </div>
+                          </a>
+                          <a href="Tropical_Flavour.html">
+                            <div class="slider-card" id="tropical">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="/images/Tin_cans/tropical_tin.png" alt="" class="image">
+                                </div>
+                                <h5 class="mb-0 text-center"><b id="tropical_disp">Tropical Edition</b></h5>
+                            </div>
+                          </a>
+                          <a href="Berry_Flavour.html">
+                            <div class="slider-card" id="berry">
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <img src="/images/Tin_cans/berry_tin.png" alt="" class="image">
+                                </div>
+                                <h5 class="mb-0 text-center"><b id="berry_disp">Berry Edition</b></h5>
+                            </div>
+                          </a>
+                        </div>
+                  </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="foot1">
+            <div class="foot2">
+                <div class="foot4">
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Produts</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Brand Protection</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Shops</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Media</a>
+                </div>
+                <br>
+            </div>
+            <div class="foot3">
+                <div class="foot4">
+                    <a href="#">Fraud Warning</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Contact Us</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Jobs</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Terms Of Use</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Imprints</a>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div>
+            <h4 class="copy_right">&copy 2021 Terra Green</h2>
+        </div>
+    </footer> 
+    
+    <!-- <script src=""></script> -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/Product.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="JS/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+    <script src="JS/carousal.js"></script>
+</body>
+</html>

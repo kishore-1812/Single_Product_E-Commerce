@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Payment.css" type="text/css">
+    <title>Payment Gateway</title>
+</head>
+
+<body>
+    <div class="fill">
+        <img src="/images/transfer.jpg">
+    </div>
+    <div class="center">
+        <div class="top">
+            <p>total amount is: &#8377<span class="total"></span></p>
+        </div>
+        <div class="inner_div">    
+            <div class="options">
+                <h3>Payment Selection</h3>
+                <div id="underline"></div>
+                <div class="pay_option">
+                    <input type="radio" name="click" id="card" value="credit" onclick="Option1()">
+                    <label for="credit">Credit Card/Debit Card</label><br>
+                </div>
+                <div class="pay_option">
+                    <input type="radio" name="click" id="net" value="net" onclick="Option2()">
+                    <label for="net">Net Banking</label><br>
+                </div>
+                <div class="pay_option">
+                    <input type="radio" name="click" id="upi" value="upi" onclick="Option3()">
+                    <label for="upi">UPI</label><br>
+                </div>
+                <div class="pay_option">
+                    <input type="radio" name="click" id="paytm" value="paytm" onclick="Option4()">
+                    <label for="paytm">Paytm</label>
+                </div>
+            </div>
+            <div class="vl"></div>
+            <div class="right_side_container">
+                <form action="ordered.html" id="card_details">
+                    <label>Pay using Credit or Debit card</label><br><br>
+                    <div class="card-number">
+                    <label> Card Number </label>
+                    <input type="text" class="card-number-field" placeholder="###-###-###" required maxlength="14" minlength="14">
+                    </div><br>
+                    <div class="date-number">
+                    <label> Expiry Date </label>
+                    <input type="text" class="number-field" placeholder="MM-YY" required maxlength="5" minlength="5">
+                    </div><br>
+                    <div class="cvv-number">
+                    <label> CVV number </label>
+                    <input type="password" class="cvv-number-field" placeholder="xxx" required maxlength="3" minlength="3">
+                    </div><br>
+                    <div class="nameholder-number">
+                    <label> Card Holder name </label>
+                    <input type="text" class="card-name-field" placeholder="Enter your Name" required>
+                    </div><br>
+                    <button onclick="done()" type="submit" class="submit-now-btn">pay</button>
+                </form>
+                </div><br>
+                <div id="Net_Banking">
+                    <label>Pay Using Net Banking</label><br><br>
+                    <form id="bank">
+                        <div class="bank1">
+                            <input type="radio" name="click" id="hdfc" value="net" onclick="check1()">
+                            <label for="hdfc">HDFC Bank</label><br>
+                        </div><br>
+                        <div class="bank1">
+                            <input type="radio" name="click" id="icici" value="net" onclick="check2()">
+                            <label for="icici">ICICI Bank</label><br>
+                        </div><br>
+                        <div class="bank1">
+                            <input type="radio" name="click" id="axis" value="upi" onclick="check3()">
+                            <label for="axis">AXIS Bank</label><br>
+                        </div><br>
+                        <div class="bank1">
+                            <input type="radio" name="click" id="citi" value="paytm" onclick="check4()">
+                            <label for="citi">CITI Bank</label><br>
+                        </div>
+                    </form><br>
+                    <form action="ordered.html" id="credentials">
+                        <div class="UserName">
+                            <label>UserName</label>
+                            <input type="text" class="user-name" placeholder="xxxxxx" required><br>
+                        </div><br>
+                        <div class="Password">
+                            <label>Password</label>
+                            <input type="password" class="password" required><br>
+                        </div><br>
+                    <button onclick="done()" type="submit" class="submit-now-btn">pay</button>
+                    </form><br>
+                </div>
+                <form action="ordered.html" id="UPI">
+                    <label>Pay Using Any Upi Apps</label><br><br>
+                    <div class="Upi-payment">
+                        <div class="Upi-Id">
+                            <label> Upi Id </label>
+                            <input type="text" class="upi-id" placeholder="xxxxxx-x@okicici" required><br>
+                        </div><br>
+                            <button onclick="done()" type="submit" class="submit-now-btn">pay</button>
+                    </div><br>
+                </form>
+                <form action="ordered.html" id="PAYTM">
+                    <label>Pay Using Paytm</label><br><br>
+                    <div class="Paytm">
+                        <div class="Phone-Number">
+                            <label> Phone Number </label>
+                            <input id="phone" type="text" class="phone-number" placeholder="xxxxxxxxxx" pattern="[0-9,+, ]+" required maxlength="10" minlength="10"><br>
+                        </div><br>
+                            <button onclick="done()" type="submit" class="submit-now-btn">pay</button>
+                    </div><br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="JS/Payment.js"></script>
+    
+</body>

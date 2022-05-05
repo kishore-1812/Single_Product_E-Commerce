@@ -1,0 +1,152 @@
+body{
+    margin: 0%;
+    overflow-x: hidden;
+}
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+}
+.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(22, 84, 126, 0.418);
+    z-index: 10;
+    width: 650px;
+    height: 500px;
+    max-width: 80%;
+}
+
+.inner_div{
+    display: flex;
+}
+/* left side payment options */
+#underline{
+    border-bottom: solid black 3px;
+    margin-top: -18px;
+    margin-bottom: 15px;
+}
+.options{
+    margin: 0px 5px 0px 10px;
+}
+.pay_option{
+    background: rgb(226, 222, 222);
+    margin-bottom: 6px;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+
+/* vertical line */
+
+.vl{
+    border-left: 3px solid black;
+    height: 300px;
+    margin: 0px 20px;
+}
+
+
+/* right side container */
+
+.right_side_container{
+    margin: 20px 5px 0px 10px;
+}
+
+
+#card_details{
+    display: none;
+}
+#Net_Banking{
+    display: none;
+}
+#UPI{
+    display: none;
+}
+#PAYTM{
+    display: none;
+}
+.card-number-field{
+    width: 40%;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.number-field{
+    width: 40%;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.cvv-number-field{
+    width: 40%;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+.card-name-field{
+    width: 40%;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    
+}
+.user-name{
+    width: 40%;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+.password{
+    width: 40%;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    
+}
+#credentials{
+    display: none;
+}
+.upi-id{
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+.phone-number{
+    width: 40%;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+
+}
+#bank{
+    display: flex;
+}
+.bank1{
+    background: rgb(226, 222, 222);
+    margin-right: 6px;
+    border-radius: 6px;
+    padding: 10px;
+}
+button{
+    width: 40%;
+    padding: 5px 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.top{
+    font-size: 2rem;
+    text-align: center;
+}

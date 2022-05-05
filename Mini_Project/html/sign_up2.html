@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/sign_up2.css" type="text/css">
+    <title>sign_up page</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="left_nav">
+                <div class="logo">
+                    <a href="index.html">
+                    <img class="logo_pic" src="/images/logo_png.png" alt="logo">
+                </a>
+                </div>
+                <div class="logo_name">
+                    <a href="index.html"><h4>ƬΣЯЯΛ GЯΣΣП</h4></a>
+                </div>
+            </div>
+            <div class="right_nav">
+                <a href="index.html">Home</a>
+                <a href="Standard_Flavour.html">Products</a>
+                <button data-modal-target="#modal"id="sign_in">Sign In</button>
+                <button id="profile" onclick="profile()">profile</button>                
+                <div class="avatar-wrapper" id="avatar-wrapper">
+                    <div class="log-toolContainer">
+                        <div class="log-popover">
+                            <a href="cart.html">
+                                <button>Profile</button>
+                            </a>
+                            <button class="logout" onclick="signOut()">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Sign-in pop up window -->
+    <div class="modal" id="modal">
+        <div class="modal-inner">
+            <img class="logo_pic_1" src="/images/modal_logo1.png" alt="logo">
+            <button data-close-button class="close_button">&times;</button>
+        </div>
+        <h3>Sign In To Get Most Of Our Terra Green</h3>
+        <div class="modal-outer">
+            <div id="sign_up">
+                <div class="form">
+                    <label for="email">E-Mail</label>
+                    <input id="Email" type="email" placeholder="Enter your Mail ID">
+                    <br>
+                    <label for="password">Password</label>
+                    <input id="Password" type="password" placeholder="Enter your password">
+                    <button id="signIn" onclick="signIn()">signIn</button>
+                    <h5 id="signup">If You Don't Have An Account? <a id="signup_1" href="sign_up2.html">Sign Up</a></h5>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="overlay"></div>
+    
+
+    <div id="signup_form">
+        <div class="form">
+            <h2>Sign Up</h2>
+            <label for="Name">Name</label>
+            <input id="full_name" type="text" required>
+            <label for="name">UserName</label>
+            <input id="Username" type="text" required>
+            <label for="E-mail">E-Mail</label>
+            <input id="email" type="email" required>
+            <label for="Password">Password</label>
+            <input id="password" type="password" required>
+            <label for="number">Contact Number</label>
+            <input id="Phone" type="text" pattern="[0-9,+, ]+" required>
+            <label for="reason">Residental <Address></Address></label>
+            <textarea name="reason_area" id="text_area" cols="10" rows="10"></textarea>
+            <button onclick="signUp()" id="signUp">signUp</button>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="JS/login.js"></script>
+    <script src="JS/sign_up2.js"></script>
+    
+</body>
+</html>

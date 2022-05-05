@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="left_nav">
+                <div class="logo">
+                    <a href="index.html">
+                    <img class="logo_pic" src="/images/logo_png.png" alt="logo">
+                </a>
+                </div>
+                <div class="logo_name">
+                    <a href="index.html"><h4>ƬΣЯЯΛ GЯΣΣП</h4></a>
+                </div>
+            </div>
+            <div class="right_nav">
+                <a href="index.html">Home</a>
+                <a href="Standard_Flavour.html">Products</a>
+                <button data-modal-target="#modal" id="sign_in">Sign In</button> 
+                <button id="profile" onclick="profile()">profile</button>                
+                <div class="avatar-wrapper" id="avatar-wrapper">
+                    <div class="log-toolContainer">
+                        <div class="log-popover">
+                            <a href="cart.html">
+                                <button>Profile</button>
+                            </a>
+                            <button class="logout" onclick="signOut()">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="cart_div">
+        <a href="Cart.html">
+           <button id="cart_button" onclick="cart()">
+               <img src="/images/shopping-cart.png" alt="">
+            </button> 
+        </a>
+    </div>
+    <!-- Sign-in pop up window -->
+    <div class="modal" id="modal">
+        <div class="modal-inner">
+            <img class="logo_pic_1" src="/images/modal_logo1.png" alt="logo">
+            <button data-close-button class="close_button">&times;</button>
+        </div>
+        <h3>Sign In To Get Most Of Our Terra Green</h3>
+        <div class="modal-outer">
+            <div id="sign_up">
+                <div class="form">
+                    <label for="email">E-Mail</label>
+                    <input id="Email" type="email" placeholder="Enter your Mail ID">
+                    <br>
+                    <label for="password">Password</label>
+                    <input id="Password" type="password" placeholder="Enter your password">
+                    <button id="signIn" onclick="signIn()">signIn</button>
+                    <h5 id="signup">If You Don't Have An Account? <a id="signup_1" href="sign_up2.html">Sign Up</a></h5>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <!--image next to nav -->
+    <img src="/images/final_png.png" alt="" id="top_pic">
+    <br><br>
+    <!-- Products  -->
+    <h1 id="buy_now">Buy Now</h1>
+    <hr>
+    <div class="panel">
+        <div class="box">
+            <div class="image">
+                <!-- Peach free site -->
+                <a href="Peach_Flavour.html">
+                    <!-- Peach free picture -->
+                    <img src="/images/Tin_cans/peach_tin.png" alt="" class="peach tins">
+                </a>
+            </div>
+            <div class="name">
+                <div class="title">
+                    Peach Flavour
+                </div>
+                <span class="price">
+                    &#8377 50.00
+                </span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <!-- sugar free site -->
+                <a href="Sugar_Free_Flavour.html">
+                    <!-- sugra free picture -->
+                    <img src="/images/Tin_cans/sugarfree_tin.png" alt="" class="tins">
+                </a>
+            </div>
+            <div class="name">
+                <div class="title">
+                   Sugar Free Flavour
+                </div>
+                <span class="price">
+                    &#8377 40.00
+                </span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <!-- standard flavour page  -->
+                <a href="Standard_Flavour.html">
+                    <!-- standard flavour picture -->
+                    <img src="/images/Tin_cans/standard_tin.png" alt="" class="tins">
+                </a>
+            </div>
+            <div class="name">
+                <div class="title">
+                   Standard Flavour
+                </div>
+                <span class="price">
+                    &#8377 30.00
+                </span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <!-- berry flaovour page -->
+                <a href="Berry_Flavour.html">
+                    <!-- berry floavour picture -->
+                    <img src="/images/Tin_cans/berry_tin.png" alt="" class="tins">
+                </a>
+            </div>
+            <div class="name">
+                <div class="title">
+                   Berry Flavour
+                </div>
+                <span class="price">
+                    &#8377 40.00
+                </span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <!-- tropical floavour page -->
+                <a href="Tropical_Flavour.html">
+                    <!-- tropical flaovour picture -->
+                    <img src="/images/Tin_cans/tropical_tin.png" alt="" class="tins">
+                </a>
+            </div>
+            <div class="name">
+                <div class="title">
+                    Tropical Flavour
+                </div>
+                <span class="price">
+                    &#8377 50.00
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- Bulk ordering form -->
+    <div id="bulk_form">
+    <form id="contact" action="https://formspree.io/f/xzbyneva" method="post">
+            <h2>Contact Form</h2>
+            <label for="name">Name</label>
+            <input name="name" type="text" required>
+            <label for="email">E-Mail</label>
+            <input name="email" type="email" required>
+            <label for="number">Contact Number</label>
+            <input name="tel" type="text" required>
+            <br><br>
+            <div class="f1">
+                <label for="Ratings">How Will You Rate Our Website</label>
+                <div class="f3">
+                    <div class="f2">
+                        <input type="radio" name="Ratings" id="hdfc" value="5">
+                        <label for="Ratings">VERY GOOD</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Ratings" id="icici" value="4">
+                        <label for="Ratings">GOOD</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Ratings" id="axis" value="3">
+                        <label for="Ratings">NEUTRAL</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Ratings" id="citi" value="2">
+                        <label for="Ratings">BAD</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Ratings" id="citi" value="1">
+                        <label for="Ratings">VERY BAD</label>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="f1">
+                <label for="Ratings">How likely are you to recommend this product?</label>
+                <div class="f4">
+                    <div class="f2">
+                        <input type="radio" name="Recommendation" id="hdfc" value="5">
+                        <label for="Ratings">VERY Likely</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Recommendation" id="icici" value="4">
+                        <label for="Ratings">Likely</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Recommendation" id="axis" value="3">
+                        <label for="Ratings">Maybe</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Recommendation" id="citi" value="2">
+                        <label for="Ratings">Maybe Not</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Recommendation" id="citi" value="1">
+                        <label for="Ratings">NOT Likely</label>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="f1">
+                <label for="Ratings">Which Flavour Of Ours Did you like Most and likely To recommend</label>
+                <div class="f5">
+                    <div class="f2">
+                        <input type="radio" name="Favourite Flavour" id="hdfc" value="Peach">
+                        <label for="Ratings">Peach</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Favourite Flavour" id="icici" value="SugarFree">
+                        <label for="Ratings">SugarFree</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Favourite Flavour" id="axis" value="Standard">
+                        <label for="Ratings">Standard</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Favourite Flavour" id="citi" value="Berry">
+                        <label for="Ratings">Berry</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Favourite Flavour" id="citi" value="Tropical">
+                        <label for="Ratings">Tropical</label>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="f1">
+                <label for="Ratings">Incase You Need Our Sponsorship for an event</label>
+                <div class="f6">
+                    <div class="f2">
+                        <input type="radio" name="sponsorship" id="hdfc" value="Yes" onclick="check1()">
+                        <label for="Ratings">YES</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="sponsorship" id="icici" value="No" onclick="check4()">
+                        <label for="Ratings">NO</label>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="bulkr">
+                <label for="reason">Reason</label>
+                <textarea name="bulk messages" id="text_area" cols="145" rows="7"></textarea>
+            </div>
+            <br>
+            <div class="f1">
+                <label for="Ratings">Incase You Encountered a problem When buying our product from our website</label>
+                <div class="f7">
+                    <div class="f2">
+                        <input type="radio" name="Payment Issue" id="hdfc" value="Yes" onclick="check2()">
+                        <label for="Ratings">YES</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Payment Issue" id="icici" value="No" onclick="check5()">
+                        <label for="Ratings">NO</label>
+                    </div>
+                </div>
+            </div><br>
+            <div id="payr">
+                <label for="reason">Reason</label>
+                <textarea name="payment issue messages" id="text_area" cols="145" rows="7"></textarea>
+            </div><br>
+            <div class="f1">
+                <label for="Ratings">Incase You Need Our Sponsorship for an event</label>
+                <div class="f8">
+                    <div class="f2">
+                        <input type="radio" name="Delivery Issue" id="hdfc" value="Yes" onclick="check3()">
+                        <label for="Ratings">YES</label>
+                    </div><br>
+                    <div class="f2">
+                        <input type="radio" name="Delivery Issue" id="icici" value="No" onclick="check6()">
+                        <label for="Ratings">NO</label>
+                    </div>
+                </div>
+            </div><br>
+            <div id="delr">
+                <label for="reason">Reason</label>
+                <textarea name="delivery issue messages" id="text_area" cols="145" rows="7"></textarea>
+            </div><br>
+            <input type="submit" name="submit">
+        </form>
+    </div>
+    <footer>
+        <div class="foot1">
+            <div class="foot2">
+                <div class="foot4">
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Produts</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Brand Protection</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Shops</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Media</a>
+                </div>
+                <br>
+            </div>
+            <div class="foot3">
+                <div class="foot4">
+                    <a href="#">Fruad Warning</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Contact Us</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Jobs</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Terms Of Use</a>
+                </div>
+                <br>
+                <div class="foot4">
+                    <a href="#">Imprints</a>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div>
+            <h4 class="copy_right">&copy 2021 Terra Green</h2>
+        </div>
+    </footer> 
+    
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="JS/login.js"></script>
+    
+    <script src="JS/index.js"></script>
+
+    
+</body>
+</html>
