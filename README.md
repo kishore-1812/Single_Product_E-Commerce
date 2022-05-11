@@ -12,6 +12,10 @@ This repositry contains a single product e-commerce website which is not hosted 
 
 ![image](https://user-images.githubusercontent.com/63336975/166973576-30a0eb39-b93a-4c69-bfac-40caabb8c112.png)
 
+> This is a sign-in modal 
+
+![image](https://user-images.githubusercontent.com/63336975/167841168-39f2349e-f715-43b3-99bb-ec58cce6c874.png)
+
 ### Cart Page
 ![image](https://user-images.githubusercontent.com/63336975/167839787-dabc6f1f-9933-485c-b0da-51b80f403c25.png)
 
